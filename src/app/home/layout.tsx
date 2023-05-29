@@ -1,17 +1,6 @@
-import Script from 'next/script'
-
 import Footer from '@/app/components/common/footer'
 import Header from '@/app/components/common/header'
-
-// <!-- Vendor CSS Files -->
-import "@/app/assets/vendor/aos/aos.css"
-import "@/app/assets/vendor/bootstrap/css/bootstrap.min.css"
-import "@/app/assets/vendor/bootstrap-icons/bootstrap-icons.css"
-import "@/app/assets/vendor/boxicons/css/boxicons.min.css"
-import "@/app/assets/vendor/glightbox/css/glightbox.min.css"
-import "@/app/assets/vendor/swiper/swiper-bundle.min.css"
-// <!-- Template Main CSS File -->
-import "@/app/assets/css/style.css"
+import Script from 'next/script'
 
 export const metadata = {
   title: 'Treyee Company',
