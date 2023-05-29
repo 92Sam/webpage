@@ -1,21 +1,20 @@
-import Index from "@/app/components/home";
+import Background from "@/app/components/home/background";
 import AboutUs from "@/app/components/home/about-us";
 import Portfolio from "@/app/components/home/portfolio";
 import Services from "@/app/components/home/services";
+import { Contact } from "../components/home/contact";
 
 
 export default function Home() {
   return (
     <>
-        <Index></Index>
+        <Background></Background>
 
         <main id="main">
-          AboutUs
           <AboutUs></AboutUs>
-          SERVICE
           <Services></Services>
-          PORTOFOLIO
           <Portfolio></Portfolio>
+          <Contact></Contact>
         </main>
        
     </>

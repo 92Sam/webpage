@@ -1,35 +1,46 @@
+import {HomeImpl} from "@/app/services/cms/home/impl/home.service"
+import { CompanyDetails, Contacts} from "@/app/services/cms/home/dtos";
+
+const {name,description} = HomeImpl.getInstance().getCompanyDetails<CompanyDetails>()
+const {address, catalog, social_media} = HomeImpl.getInstance().getContact<Contacts>()
+
 const FooterData = () => {
-    return (
-        <></>
-        // <>
-        //     <p>
-        //         A108 Adam Street <br>
-        //         NY 535022, USA<br><br>
-        //         <strong>Phone:</strong> +1 5589 55488 55<br>
-        //         <strong>Email:</strong> info@example.com<br>
-        //       </p>
-        // </>
-    )
+  const addressDetail = address.at(0)
+  const phoneNumberDetail = catalog.filter(v => v.key == "phone_number").at(0)
+  const emailDetail = catalog.filter(v => v.key == "email").at(0)
+  return (
+    <>
+        <p>
+            {addressDetail?.address}<br></br>
+            {addressDetail?.zipcode}, {addressDetail?.country_iso_code}<br></br>
+            <strong>Phone:</strong> {phoneNumberDetail?.value}<br></br>
+            <strong>Email:</strong> {emailDetail?.value}<br></br>
+        </p>
+    </>
+  )
 }
 
 
 const Footer = () => {
-    return (<>
-<footer id="footer">
-    <div className="footer-top">
-      <div className="container">
-        <div className="row">
+  return (<>
+    <footer id="footer">
+      <div className="footer-top">
+        <div className="container">
+          <div className="row">
 
-          <div className="col-lg-4 col-md-6">
-              <h3>Squadfree</h3>
-              <p className="pb-3"><em>Qui repudiandae et eum dolores alias sed ea. Qui suscipit veniam excepturi quod.</em></p>
-
+            <div className="col-lg-4 col-md-6">
+              <h3>{name}</h3>
+              <p className="pb-3"><em>{description}</em></p>
+              <FooterData/>
               <div className="social-links mt-3">
-                <a href="#" className="twitter"><i className="bx bxl-twitter"></i></a>
-                <a href="#" className="facebook"><i className="bx bxl-facebook"></i></a>
-                <a href="#" className="instagram"><i className="bx bxl-instagram"></i></a>
-                <a href="#" className="google-plus"><i className="bx bxl-skype"></i></a>
-                <a href="#" className="linkedin"><i className="bx bxl-linkedin"></i></a>
+                {social_media.map(v =>{
+                  const className = `bx bxl-${v.type}`
+                  return (
+                    <>
+                      <a href={v.link} className={v.type}><i className={className}></i></a>
+                    </>
+                  )
+                })}
               </div>
             </div>
           </div>
@@ -58,26 +69,27 @@ const Footer = () => {
 
           <div className="col-lg-4 col-md-6 footer-newsletter">
             <h4>Our Newsletter</h4>
-            <p>Tamen quem nulla quae legam multos aute sint culpa legam noster magna</p>
-            {/* <form action="" method="post">
-              <input type="email" name="email"><input type="submit" value="Subscribe">
-            </form> */}
-
+            <p>We are Treyee</p>
+            <>
+              {/* <form action="" method="post">
+                <input type="email" name="email"><input type="submit" value="Subscribe">
+              </form> */}
+            </>
           </div>
 
         </div>
       </div>
 
-    <div className="container">
-      <div className="copyright">
-        &copy; Copyright <strong><span>Squadfree</span></strong>. All Rights Reserved
+      <div className="container">
+        <div className="copyright">
+          &copy; Copyright <strong><span>{name} {new Date().getFullYear()}</span></strong>. All Rights Reserved
+        </div>
+        <div className="credits">
+          Designed by <a href="">{name}</a>
+        </div>
       </div>
-      <div className="credits">
-        Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
-      </div>
-    </div>
-</footer>
-</>)
+    </footer>
+  </>)
 
 }
 
