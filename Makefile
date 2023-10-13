@@ -1,6 +1,5 @@
 #/bin/sh
 
-
 build_container: /
 	docker-compose --env-file ./.env -f docker-compose.yml build
 
@@ -18,3 +17,6 @@ run_image: /
 
 start_image: /
 	docker start -p 1000:80 treyee-webpage:1.0
+
+run_dev: 
+	npm run dev

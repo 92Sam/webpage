@@ -1,0 +1,113 @@
+{
+    "company_details":{
+        "name":"Treyee",
+        "description":""
+    },
+    "home":{
+        "title":"Unlock the Power of your business with Treyee",
+        "paper":"Learn about how Treyee can help transform the way businesses achieve success through DevOps and other  disruptive information technology solutions."
+    },
+    "experience":{
+        "title":"Treyee: World Wide Experience",
+        "paper":"America: United States, Mexico, Guatemala, Honduras, El Salvador, Nicaragua, Panama, Jamaica, Costa Rica, Colombia, Peru, Brasil, Argentina, Chile, Venezuela. Europe: Portugal, Spain, Italy, France, England, Sweden, Malta. Asia: India, Thailand, China. Australia"
+    },
+    "services":{
+        "title":"Introduction to Treyee",
+        "description":"Introduction to Treyee",
+        "list":[
+            "Experience: Highly certified and experienced team in DevOps",
+            "Cloud & Software: Cloud, Software Development",
+            "Deep Engineering: Site Reliability Engineering",
+            "Blockchain: Using Blockchain just like a inmutable transactions and software applications",
+            "Web3: FinTech and Cybersecurity",
+            "Experience: 10+ years of experience in IT consulting Worldwide experience with clients of all size",
+            "Open Sources: Open Source oriented"
+        ]
+    },
+    "about_us":{
+        "title":"Our DevOps Expertise and Approach",
+        "description":"",
+        "list":[
+            "Assessment: Analyze existing processes and identify areas of improvement",
+            "Implementation: Design and execute a tailored DevOps strategy",
+            "Automation: Streamline deployment, testing, and monitoring",
+            "Training: Equip teams with skills to thrive in a DevOps environment",
+            "Continuous Improvement: Monitor, measure, and optimize processes"
+        ]
+    },
+    "portfolio":{
+        "description":"Our Clients",
+        "projects":[],
+        "clients":[]
+    },
+    "teams":{
+        "staff":[
+            {
+                "name":"",
+                "last_name":"",
+                "about_me":"",
+                "position":"",
+                "skills":[],
+                "social_media":[]
+            }
+        ]
+    },
+    "contacts":{
+        "catalog":[
+            {
+                "key":"description",
+                "value":"Found us here in treyee",
+                "data":{}
+            },
+            {
+                "key":"email",
+                "value":"alex@teyee.com",
+                "data":{}
+            },
+            {
+                "key":"phone_number",
+                "value":"+2321861231212",
+                "data":{}
+            }
+        ],
+        "address":[
+            {
+                "lat":"",
+                "long":"",
+                "link":"",
+                "country_iso_code":"",
+                "address":"Guatemala Data Information",
+                "zipcode":"",
+                "phone_number":"",
+                "email":""
+            }
+        ],
+        "social_media":[
+            {
+                "type":"instagram",
+                "user":"",
+                "link":""
+            },
+            {
+                "type":"facebook",
+                "user":"",
+                "link":""
+            },
+            {
+                "type":"linkedin",
+                "user":"",
+                "link":""
+            },
+            {
+                "type":"twitter",
+                "user":"",
+                "link":""
+            },
+            {
+                "type":"skype",
+                "user":"",
+                "link":""
+            }
+        ]
+    }
+}
