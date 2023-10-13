@@ -1,34 +1,127 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Frontend Webapp Treyee
+---
 
-## Getting Started
+## [:construction: Go to Project Dashboard](https://www.notion.so/treyee/Treyee-World-Wide-Web-0f230fb08f864ccaaaf5cf74174a8fcb?pvs=4)
 
-First, run the development server:
+## :hammer: Stack
+- Next.js - React
+- NodeJS >= 18.0V
+- Docker
+- Docker Compose
+- Fetch Interceptors
+- JWT
+- Material @MUI
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
+## Set enviroments .env file
+
+In the project directory create the enviroments to connect to the api, you can see an .env.example with the parameters to use.
+
+```env
+PORT=3000
+ENV=
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## :warning: To run the project it is mandatory to have the following programs
+- [Docker](https://www.docker.com/products/docker-desktop/)
+- [Docker Compose](https://docs.docker.com/compose/install/linux/)
+- [Make GNU](https://gnuwin32.sourceforge.net/packages/make.htm)
+- [Depends On - API Strapi CMS Project]()
+- [Documentation Related - DAC "Treyee"](https://github.com/treyee/documentation-flows)
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+---
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+## Run project
 
-## Learn More
+In the project directory, you can run the docker image only with the makeFile:
 
-To learn more about Next.js, take a look at the following resources:
+###[Makefile](https://github.com/treyee/webpage/blob/main/Makefile) - Multiple execution commands
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+### Runs the app in dev mode
+``` bash
+make run_dev 
+```
+Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
-## Deploy on Vercel
+### Runs the app in prod mode - Nginx
+``` bash
+make up_container 
+```
+Open [http://localhost:80](http://localhost:80) to view it in the browser.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+--- 
+
+## Structure Folder
+```
+├── public
+│   └── assets
+│       ├── css
+│       └── img
+│           ├── backgrounds
+│           ├── portfolio
+│           ├── team
+│           └── testimonials
+└── src
+    ├── app
+    │   ├── assets
+    │   │   ├── css
+    │   │   ├── img
+    │   │   │   ├── backgrounds
+    │   │   │   ├── portfolio
+    │   │   │   ├── team
+    │   │   │   └── testimonials
+    │   │   ├── js
+    │   │   ├── scss
+    │   │   └── vendor
+    │   │       ├── aos
+    │   │       ├── bootstrap
+    │   │       │   ├── css
+    │   │       │   └── js
+    │   │       ├── bootstrap-icons
+    │   │       │   └── fonts
+    │   │       ├── boxicons
+    │   │       │   ├── css
+    │   │       │   └── fonts
+    │   │       ├── glightbox
+    │   │       │   ├── css
+    │   │       │   └── js
+    │   │       ├── isotope-layout
+    │   │       ├── php-email-form
+    │   │       ├── purecounter
+    │   │       └── swiper
+    │   ├── components
+    │   │   ├── common
+    │   │   └── home
+    │   │       ├── aboutus
+    │   │       ├── contact
+    │   │       ├── index
+    │   │       ├── portfolio
+    │   │       └── services
+    │   ├── config
+    │   ├── home
+    │   ├── hooks
+    │   ├── layouts
+    │   │   ├── auth
+    │   │   └── home
+    │   ├── pages
+    │   │   ├── sigin
+    │   │   ├── signup
+    │   │   └── tems
+    │   ├── routes
+    │   ├── services
+    │   │   └── cms
+    │   │       ├── home
+    │   │       │   ├── data
+    │   │       │   ├── dtos
+    │   │       │   ├── impl
+    │   │       │   └── interfaces
+    │   │       └── product
+    │   └── stores
+    │       ├── actions
+    │       ├── reducers
+    │       └── states
+    └── templates
+        └── Squadfree
+            └── forms
+```
