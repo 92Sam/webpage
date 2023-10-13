@@ -1,0 +1,27 @@
+version: "3"
+
+services:
+  treyee_webpage_nextjs:
+    container_name: treyee_webpage_nextjs:v0.1
+    build: 
+      context: .
+      dockerfile: nextjs.dockerfile
+    networks:
+      - treyee-cms
+    ports:
+      - 3000:3000
+  treyee_webpage_nginx:
+    container_name: treyee_webpage_nginx:v0.1
+    depends_on:
+      - treyee_webpage_nextjs
+    build:
+      context: .
+      dockerfile: nginx.dockerfile
+    ports:
+      - 80:80
+    networks:
+      - treyee-cms
+
+networks:
+  treyee-cms:
+    driver: bridge
